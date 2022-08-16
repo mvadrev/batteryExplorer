@@ -1,0 +1,49 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
+    <mat-toolbar class="">
+      <img height="35px" src="./../../assets/dashLogo.png" />
+    </mat-toolbar>
+    <mat-nav-list class="pt-5">
+      <a mat-list-item class="pt-4">Home</a>
+      <a mat-list-item class="pt-4" (click)="gotoFunctionDash()"
+        ><mat-icon svgIcon="homeBA" matListIcon id="dash"></mat-icon
+        >Dashboard</a
+      >
+      <a mat-list-item class="pt-4" (click)="gotoFunctionDevices()"
+        ><mat-icon svgIcon="devicesBA" matListIcon></mat-icon>Devices</a
+      >
+      <a mat-list-item class="pt-4" (click)="gotoFunctionExp()"
+        ><mat-icon svgIcon="experimentsBA" matListIcon></mat-icon>Experiments</a
+      >
+      <a mat-list-item class="pt-4">User</a>
+      <a mat-list-item class="pt-4" (click)="gotoFunctionPro()"
+        ><mat-icon svgIcon="profileBA" matListIcon></mat-icon>Profile</a
+      >
+      <a mat-list-item class="pt-4"
+        ><mat-icon svgIcon="logoutBA" matListIcon></mat-icon>Logout</a
+      >
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="mmm">
+    <mat-toolbar class="mmm">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async"
+      >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span></span>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

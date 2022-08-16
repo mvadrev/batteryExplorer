@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row pt-5">
+    <div class="col-12 d-flex justify-content-center">
+      <img src="./../assets/Logo.png" />
+    </div>
+    <div class="col-12 d-flex justify-content-center">
+      <div class="pt-2">Open Battery Cycler</div>
+    </div>
+    <div class="loginText col-12 d-flex justify-content-center pt-5">Login</div>
+  </div>
+  <form (ngSubmit)="submitForm()" [formGroup]="loginForm">
+    <div class="row pt-5">
+      <div class="col-12 d-flex justify-content-center">
+        <mat-form-field [style.width.px]="237" appearance="outline">
+          <mat-label>Email</mat-label>
+          <input formControlName="email" matInput placeholder="Enter email" />
+          <!-- <mat-icon matSuffix>s</mat-icon> -->
+          <!-- <mat-hint>Hint</mat-hint> -->
+        </mat-form-field>
+      </div>
+
+      <div class="col-12 d-flex justify-content-center">
+        <mat-form-field [style.width.px]="237" appearance="outline">
+          <mat-label>Password</mat-label>
+          <input
+            class="inp"
+            type="password"
+            matInput
+            placeholder="Enter Password"
+            formControlName="password"
+          />
+          <!-- <mat-icon matSuffix>s</mat-icon> -->
+          <!-- <mat-hint>Hint</mat-hint> -->
+        </mat-form-field>
+      </div>
+
+      <div class="col-12 d-flex justify-content-center pt-5">
+        <button mat-raised-button color="primary">Submit</button>
+      </div>
+
+      <div class="col-12 d-flex justify-content-center pt-5">
+        If you don't have an account
+      </div>
+      <div class="regHover col-12 d-flex justify-content-center">
+        <u (click)="goToReg()">Signup</u>
+      </div>
+    </div>
+  </form>
+</div>

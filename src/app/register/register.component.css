@@ -1,0 +1,33 @@
+.loginText {
+    font-size: 48px;
+    font-weight: bold;
+    font-family: Roboto;
+}
+
+.butcol {
+    background-color: #525252;
+}
+
+
+
+.content {
+    height: calc(100vh - 98px);
+    border-radius: 10px;
+    margin: 16px;
+    margin-left: 32px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+    color: lightgray;
+}
+
+mat-sidenav-container {
+    height: calc(100vh - 65px);
+}
+
+.regHover:hover {
+    cursor: pointer
+}

@@ -1,0 +1,19 @@
+.welcomUSer {
+font-size: 48px !important;
+font-weight: bold;
+font-family: Roboto;
+text-align: center;
+line-height: 45px;
+}
+
+.getStartText {
+    color: #C4C4C4;
+    font-family: Roboto;
+    font-size: 38px;
+    text-align: center;
+line-height: 30px;
+}
+
+.registerButon {
+    background-color: #525252;
+}
