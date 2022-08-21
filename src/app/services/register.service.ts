@@ -9,7 +9,7 @@ export class RegisterService {
 
   constructor(private route: Router, private http: HttpClient) { }
 
-  urlPath: string = "http://localhost:3000/api/";
+  urlPath: string = "http://3.86.148.234:3000/api/";
 
   registerUser(data:any) {
     const headers = {

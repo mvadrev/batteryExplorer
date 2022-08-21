@@ -12,7 +12,7 @@ export class LoginService {
 
    }
 
-   urlpath = 'http://localhost:3000/api/'
+   urlpath = 'http://3.86.148.234:3000/api/'
 
    loginUser(userName: string, password: string): Observable<any> {
      const headers = {
